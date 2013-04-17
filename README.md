@@ -8,14 +8,19 @@ Project that will establish college counciling for schools that MAPS is affiliat
 PROJECT GUIDELINES:
 ====================
 
-MISC DEV INFO:
+Useful Dev Info:
 ==============
-code is currently being hosted on appfog at:	http://mapscallcenter.aws.af.cm
+code is currently being hosted on appfog at:	http://mapsapp.aws.af.cm
 
-appfog username:	shazeline@gmail.com
+appfog username:	mapscallcenter@gmail.com
 
-appfog password:	mapsadmin1919 (not working right now for some reason)
+appfog password:	mapsadmin1919
 
 current phone# being used:	(949) 391-4022
 
-callback loc for this num:	http://mapscallcenter.aws.af.cm/endpoint.php
+callback location for this num:	http://mapsapp.aws.af.cm/endpoint.php
+
+gmail account:	mapscallcenter@gmail.com
+
+gmail pw:	mapsadmin1919
+
