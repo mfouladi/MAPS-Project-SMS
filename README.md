@@ -13,7 +13,9 @@ MISC DEV INFO:
 code is currently being hosted on appfog at:	http://mapscallcenter.aws.af.cm
 
 appfog username:	shazeline@gmail.com
+
 appfog password:	mapsadmin1919 (not working right now for some reason)
 
 current phone# being used:	(949) 391-4022
+
 callback loc for this num:	http://mapscallcenter.aws.af.cm/endpoint.php
