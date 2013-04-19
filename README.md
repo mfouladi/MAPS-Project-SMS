@@ -18,7 +18,7 @@ appfog password:	mapsadmin1919
 
 current phone# being used:	(949) 391-4022
 
-callback location for this num:	http://mapsapp.aws.af.cm/endpoint.php
+callback location for this num:	http://mapsapp.aws.af.cm/attempt-call.php
 
 gmail account:	mapscallcenter@gmail.com
 
