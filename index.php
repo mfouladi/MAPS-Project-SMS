@@ -20,13 +20,17 @@
 				Welcome to MAPS - Project SMS.<br>
 				<span>Type in your email to get started.</span>
 			</p>
-			<form method="post" action="TimeSheet/" class="order-form" id="order">
+			<form method="post" action="Login/users.php" class="order-form" id="order">
 				<p class="login-error"></p>
 				
-				<label for="mapsEmail">Email <sup>*</sup></label><br />
+				<label for="email">Email <sup>*</sup></label><br />
 				<input type="text" name="email" class="order-input" id="email" value="" /><br />
 				<br clear="all" />
-							
+				
+				<label for="password">Password<sup>*</sup></label><br />
+				<input type="password" name="password" class="order-input" id="password" /><br />
+				<br clear="all" />
+				
 				<input type='submit' name="submit" class='button' value="Submit">
 			</form>
 			<p class='login_message'>If you are an administrator, <a href="admin_login.php">login in here</a>.</p><br />

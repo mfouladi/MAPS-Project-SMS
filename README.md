@@ -12,9 +12,11 @@ Useful Dev Info:
 ==============
 code is currently being hosted on appfog at:	http://mapsapp.aws.af.cm
 
-appfog username:	mapscallcenter@gmail.com
+myPHPadmin is currently hosted at: http://mapsapp-phpmyadmin.aws.af.cm/
 
-appfog password:	mapsadmin1919
+appfog/myPHPadmin username:	mapscallcenter@gmail.com
+
+appfog/myPHPadmin password:	mapsadmin1919
 
 current phone# being used:	(949) 391-4022
 

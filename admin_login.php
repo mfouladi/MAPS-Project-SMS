@@ -23,7 +23,7 @@
 			<form method="post" action="Admin/" class="order-form" id="order">
 				<p class="login-error"></p>
 				
-				<label for="mapsEmail">Email <sup>*</sup></label><br />
+				<label for="email">Email <sup>*</sup></label><br />
 				<input type="text" name="email" class="order-input" id="email" value="" /><br />
 				<br clear="all" />
 				
