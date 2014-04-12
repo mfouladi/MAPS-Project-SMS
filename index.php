@@ -3,6 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html>
+<!-- -->
 <head>
 	<base href="<?php echo $host;?>">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
