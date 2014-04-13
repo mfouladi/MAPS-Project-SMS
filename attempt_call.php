@@ -39,13 +39,14 @@
 	//Prepare Errors Array
 	$errors = array();
 	
-	$select = "SELECT phone FROM Students";
+	$select = "SELECT phone FROM Students;";
 
 	//echo "<p>before query</p>";
-
-	$address_book = mysql_query($select);
-
-	echo "$address_book[1]";
+	$result = mysql_query($select, $link);
+	$address_book = mysql_fetch_array($result);
+	$address_book[0] = '+1' . $address_book[0];
+	mysql_close($link);
+//	echo "$address_book[0]";
 
 
 //echo "</body></html>";
@@ -78,7 +79,9 @@ header("content-type: text/xml");
 //if call isnt completed yet and if there are numbers left to call
 
 if(!in_array($_REQUEST['From'], $address_book)){
-	echo "<Response><Say>Greetings! You are not a member of Calledge. To sign up please talk to a member organization in your school.</Say><Reject/></Response>";
+	echo "<Response><Say>";
+	echo  $username; 
+	echo "Fahad i am sure! $address_book[0] Greetings! You are not a member of Calledge. To sign up please talk to a member organization in your school.</Say><Reject/></Response>";
 
 }
 else
