@@ -20,7 +20,7 @@
 	$port = "3306";
 	echo "<html><body>before mysql";
 	$link = mysql_connect("$hostname:$port", $username, $password);
-	echo "<br/>after mysql";
+	echo "<p>after mysql</p>";
 	$db_selected = mysql_select_db($db, $link);
 
 	if(!$link)
@@ -29,7 +29,7 @@
 	}
 	
 
-	echo "<br/>between IFs";
+	echo "<p>between IFs</p>";
 
 	if(!db_selected)  
 	{  
@@ -41,7 +41,7 @@
 	
 	$select = "SELECT phone FROM Students";
 
-	echo "<br/>before query";
+	echo "<p>before query</p>";
 
 	$address_book = mysql_query($select);
 
