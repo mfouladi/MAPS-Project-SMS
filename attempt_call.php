@@ -18,27 +18,39 @@ if($caller == NULL)
 	$caller = "'a student'";
 }
 
+
+
 $caller = str_replace(' ', '%20', $caller);
 header("content-type: text/xml"); 
 
 // Check the status of the call and 
 // that there is a valid number to call
 
-if($DialCallStatus!="completed" && $number_index<count($numbers)){ 
-?>
-	<Response>
-	<Dial action="attempt_call.php?number_index=<?php echo $number_index+1 ?>">
-		<Number url="screen_for_machine.php?caller=<?php echo $caller?>">
-		<?php echo $numbers[$number_index] ?>
-		</Number>
-	</Dial>
-	</Response>
-<?php
-} else {
-?>
-	<Response>		
-		<Hangup/>
-	</Response>
-<?php
+//if call isnt completed yet and if there are numbers left to call
+
+if(in_array($_REQUEST['From'], $address_book)){
+	echo "<Response><Reject/></Response>";
+
+}
+else
+{
+
+	if($DialCallStatus!="completed" && $number_index<count($numbers)){ 
+	?>
+		<Response>
+		<Dial action="attempt_call.php?number_index=<?php echo $number_index+1 ?>">
+			<Number url="screen_for_machine.php?caller=<?php echo $caller?>">
+			<?php echo $numbers[$number_index] ?>
+			</Number>
+		</Dial>
+		</Response>
+	<?php
+	} else {
+	?>
+		<Response>		
+			<Hangup/>
+		</Response>
+	<?php
+	}
 }
 ?>
