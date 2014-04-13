@@ -18,13 +18,13 @@
 		<div class="content">		
 			<p class="introduction">
 				Welcome to MAPS - Project SMS.<br>
-				<span>Type in your email to get started.</span>
+				<span>Type in your phone number to get started.</span>
 			</p>
 			<form method="post" action="Login/users.php" class="order-form" id="order">
 				<p class="login-error"></p>
 				
-				<label for="email">Email <sup>*</sup></label><br />
-				<input type="text" name="email" class="order-input" id="email" value="" /><br />
+				<label for="phone">Phone Number <sup>*</sup></label><br />
+				<input type="text" name="phone" class="order-input" id="phone" value="" /><br />
 				<br clear="all" />
 				
 				<label for="password">Password<sup>*</sup></label><br />

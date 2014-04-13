@@ -1,16 +1,22 @@
 <?php
 	//Get Database Info
-	$services_json = json_decode(getenv("VCAP_SERVICES"),true);
-	$mysql_config = $services_json["mysql-5.1"][0]["credentials"];
-	$username = $mysql_config["username"];
-	$password = $mysql_config["password"];
-	$hostname = $mysql_config["hostname"];
-	$port = $mysql_config["port"];
-	$db = $mysql_config["name"];
+	//$services_json = json_decode(getenv("VCAP_SERVICES"),true);
+	//$mysql_config = $services_json["mysql-5.1"][0]["credentials"];
+	//$username = $mysql_config["username"];
+	//$password = $mysql_config["password"];
+	//$hostname = $mysql_config["hostname"];
+	//$port = $mysql_config["port"];
+	//$db = $mysql_config["name"];
 ?>
 
 <?php
 	//Connect to database
+	$username = "root";
+	$password = "mapscallcenter1919";
+	$db = "calledge_db";
+	$hostname = "localhost";
+	$port = "3306";
+
 	$link = mysql_connect("$hostname:$port", $username, $password);
 	$db_selected = mysql_select_db($db, $link);
 	if(!$link)
@@ -25,7 +31,7 @@
 	$errors = array();
 	
 	//Get Email and Password
-	if(!isset($_POST['email']))  
+	if(!isset($_POST['phone']))  
 	{  
 		$errors[] = 'The username field must not be empty.';  
 	}  
@@ -34,14 +40,15 @@
 	{  
 		$errors[] = 'The password field must not be empty.';  
 	} 
-	$email = $_POST['email'];
+	$phone = $_POST['phone'];
 	$password = $_POST['password'];
 	// . mysql_real_escape_string($_POST['email']) . 
 	//" . mysql_real_escape_string($_POST['password']) . "
 	//Query table for user
+
 	$sql = "SELECT first_name, last_name FROM users 
-             WHERE email = '" . mysql_real_escape_string($email) . "'  
-             AND password = '" . mysql_real_escape_string($password) . "'";  
+             WHERE email = '" . mysql_real_escape_string($phone) . "'  
+             AND password = '" . hash ( "sha256" , $password ) . "'";  
 	$result = mysql_query($sql);
 	
 	//Check Query for Result
