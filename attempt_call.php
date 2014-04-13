@@ -1,7 +1,7 @@
 <?php 
 
 // Set the numbers to call (priority1, priority2, priority3)
-$numbers = array("17145857755", "17145857755");
+$numbers = array("17143158255", "18187951383");
 $address_book = array(
 	"+18187951383" => "Fahad Nathani",
     "+13107486162" => "Sakib Shaikh",
