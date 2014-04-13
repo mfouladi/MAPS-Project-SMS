@@ -3,8 +3,8 @@
 // Set the numbers to call (priority1, priority2, priority3)
 $numbers = array("17145857755", "17145857755");
 $address_book = array(
-	"+17145857755" => "Shahid Chohan",
-    "+16572060254" => "Shahid Chohan",
+	"+18187951383" => "Fahad Nathani",
+    "+13107486162" => "Sakib Shaikh",
     "+17143158255" => "Matin Fouladi");
 
 $number_index = isset($_REQUEST['number_index']) ? $_REQUEST['number_index'] : "0";
