@@ -9,7 +9,9 @@
 
 	$hostname = "localhost";
 	$port = "3306;"
+	echo "<html><body>before mysql"
 	$link = mysql_connect("$hostname:$port", $username, $password);
+	echo "<br>after mysql"
 	$db_selected = mysql_select_db($db, $link);
 
 	if(!$link)
@@ -17,6 +19,9 @@
 		exit('Error: could not establish database connection');  
 	}
 	
+
+	echo "<br>between IFs"
+
 	if(!db_selected)  
 	{  
 		exit('Error: could not select the database');  
@@ -27,11 +32,13 @@
 	
 	$select = "SELECT phone FROM Students";
 
+	echo "<br>before query"
+
 	$address_book = mysql_query($select);
 
 
 
-
+echo "</body></html>";
 
 $numbers = array("17143158255", "18187951383");
 // $address_book = array(
