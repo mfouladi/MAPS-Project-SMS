@@ -28,8 +28,8 @@ header("content-type: text/xml");
 
 //if call isnt completed yet and if there are numbers left to call
 
-if(in_array($_REQUEST['From'], $address_book)){
-	echo "<Response><Reject/></Response>";
+if(!in_array($_REQUEST['From'], $address_book)){
+	echo "<Response><Say>Greetings! You are not a member of Calledge. To sign up please talk to a member organization in your school.</Say><Reject/></Response>";
 
 }
 else
