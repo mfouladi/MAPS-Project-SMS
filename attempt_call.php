@@ -18,9 +18,9 @@
 
 	$hostname = "localhost";
 	$port = "3306";
-	echo "<html><body>before mysql";
+	//echo "<html><body>before mysql";
 	$link = mysql_connect("$hostname:$port", $username, $password);
-	echo "<p>after mysql</p>";
+	//echo "<p>after mysql</p>";
 	$db_selected = mysql_select_db($db, $link);
 
 	if(!$link)
@@ -29,7 +29,7 @@
 	}
 	
 
-	echo "<p>between IFs</p>";
+	//echo "<p>between IFs</p>";
 
 	if(!db_selected)  
 	{  
@@ -41,13 +41,13 @@
 	
 	$select = "SELECT phone FROM Students";
 
-	echo "<p>before query</p>";
+	//echo "<p>before query</p>";
 
 	$address_book = mysql_query($select);
 
 
 
-echo "</body></html>";
+//echo "</body></html>";
 
 $numbers = array("17143158255", "18187951383");
 // $address_book = array(
