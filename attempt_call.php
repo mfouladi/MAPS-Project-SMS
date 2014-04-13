@@ -1,11 +1,43 @@
 <?php 
 
 // Set the numbers to call (priority1, priority2, priority3)
+
+	$username = "root";
+
+	$password = "mapscallcenter1919";
+	$db = "calledge_db";
+
+	$hostname = "localhost";
+	$port = "3306;"
+	$link = mysql_connect("$hostname:$port", $username, $password);
+	$db_selected = mysql_select_db($db, $link);
+
+	if(!$link)
+	{
+		exit('Error: could not establish database connection');  
+	}
+	
+	if(!db_selected)  
+	{  
+		exit('Error: could not select the database');  
+	} 
+	
+	//Prepare Errors Array
+	$errors = array();
+	
+	$select = "SELECT phone FROM Students";
+
+	$address_book = mysql_query($select);
+
+
+
+
+
 $numbers = array("17143158255", "18187951383");
-$address_book = array(
-	"+18187951383" => "Fahad Nathani",
-    "+13107486162" => "Sakib Shaikh",
-    "+17143158255" => "Matin Fouladi");
+// $address_book = array(
+// 	"+18187951383" => "Fahad Nathani",
+//     "+13107486162" => "Sakib Shaikh",
+//     "+17143158255" => "Matin Fouladi");
 
 $number_index = isset($_REQUEST['number_index']) ? $_REQUEST['number_index'] : "0";
 $DialCallStatus = isset($_REQUEST['DialCallStatus']) ? $_REQUEST['DialCallStatus'] : "";
