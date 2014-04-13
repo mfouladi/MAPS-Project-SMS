@@ -7,8 +7,8 @@
 	<base href="<?php echo $host;?>">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<link rel="stylesheet" type="text/css" href="css/button.css" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+	<link rel="stylesheet" type="text/css" href="./css/button.css" />
 </head>
 <body>
 	<div id="container">
