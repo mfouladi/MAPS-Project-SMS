@@ -45,6 +45,7 @@
 
 	$address_book = mysql_query($select);
 
+	echo "$address_book[1]";
 
 
 //echo "</body></html>";
